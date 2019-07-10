@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Cadastrar Cidade";
+}
+@section scripts {
+
+    <script src="~/App/Services/previsaoService.js"></script>
+    <script src="~/App/cidadeController.js"></script>
+
+}
+
+<br /><br />
+<div ng-app="PrevisaoApp" ng-controller="cidadeController" class="row">
+    <div class="container">
+        <div class="panel panel-default" style="max-width:1100px;">
+            <div class="panel-heading" style="background-color: red; color:white; height: 50px;">
+                <div class="pull-left" style="font-size: 20px;">
+                    Cadastre a cidade:
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2" style="padding-left:20px;">
+                        <input type="text" ng-model="Cidade" class="form-control" id="txtCidade" placeholder="Nome da Cidade">
+                    </div>
+
+                    <button type="button" class="btn btn-default" ng-click="cadastrarCidade();">Salvar</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
